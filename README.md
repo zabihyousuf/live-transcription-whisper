@@ -7,6 +7,8 @@ The Live Transcription System is a full-stack application that provides real-tim
 1. **Live Transcription Server**: A FastAPI-based backend that handles real-time audio processing and transcription using machine learning models.
 2. **Live Transcription Web**: A Nuxt 3-based frontend that provides an intuitive user interface for audio capture and real-time transcription display.
 
+
+
 ## System Architecture
 
 ```
