@@ -157,3 +157,6 @@ CURRENT_BULLETIN.md
 
 config.toml
 note
+
+/audio_chunks
+.env

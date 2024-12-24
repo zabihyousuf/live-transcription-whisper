@@ -50,7 +50,7 @@ class TranscriptionWorker(threading.Thread):
             try:
                 # Get request with timeout to allow checking running flag
                 try:
-                    request = self.request_queue.get(timeout=0.5)
+                    request = self.request_queue.get(timeout=0.1)
                 except queue.Empty:
                     continue
 
