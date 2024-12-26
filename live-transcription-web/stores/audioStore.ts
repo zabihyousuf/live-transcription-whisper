@@ -110,7 +110,8 @@ export const useAudioStore = defineStore('audio', {
 
         const source = this.audioContext.createMediaStreamSource(this.stream);
 
-        const chunkDuration = config.public.audio.chunkDuration;
+        const chunkDuration = 10;
+        console.log("chunk duration " + chunkDuration)
 
         this.audioWorklet = new AudioWorkletNode(this.audioContext, 'audio-chunk-processor', {
           processorOptions: {

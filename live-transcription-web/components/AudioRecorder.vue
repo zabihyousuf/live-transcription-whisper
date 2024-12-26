@@ -31,24 +31,6 @@
 
       <button
         v-if="audioStore.audioChunks.length > 0"
-        @click="audioStore.toggleChunksVisibility()"
-        :disabled="audioStore.isStopping"
-        class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        <span>{{ audioStore.showChunks ? 'Hide Chunks' : 'Show Chunks' }}</span>
-        <svg
-          :class="{ 'rotate-180': audioStore.showChunks }"
-          class="w-4 h-4 ml-2 transition-transform duration-200"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-
-      <button
-        v-if="audioStore.audioChunks.length > 0"
         @click="audioStore.clearAllChunks()"
         :disabled="audioStore.isStopping"
         class="flex items-center px-3 py-2 text-sm font-medium text-red-600 bg-white border border-red-300 rounded-md hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -119,7 +101,7 @@ watch(
   }
 )
 
-const chunkSize = ref(5) // Default chunk size in seconds
+const chunkSize = ref(10) // Default chunk size in seconds
 
 watch(chunkSize, (newSize) => {
   // Implement logic to update chunk size if necessary
